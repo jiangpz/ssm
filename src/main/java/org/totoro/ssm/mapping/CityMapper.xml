@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.totoro.ssm.IDao.CityMapper" >
+  <resultMap id="BaseResultMap" type="org.totoro.ssm.model.City" >
+    <id column="city_id" property="cityId" jdbcType="SMALLINT" />
+    <result column="city" property="city" jdbcType="VARCHAR" />
+    <result column="country_id" property="countryId" jdbcType="SMALLINT" />
+    <result column="last_update" property="lastUpdate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    city_id, city, country_id, last_update
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Short" >
+    select 'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    from city
+    where city_id = #{cityId,jdbcType=SMALLINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Short" >
+    delete from city
+    where city_id = #{cityId,jdbcType=SMALLINT}
+  </delete>
+  <insert id="insert" parameterType="org.totoro.ssm.model.City" >
+    insert into city (city_id, city, country_id, 
+      last_update)
+    values (#{cityId,jdbcType=SMALLINT}, #{city,jdbcType=VARCHAR}, #{countryId,jdbcType=SMALLINT}, 
+      #{lastUpdate,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="org.totoro.ssm.model.City" >
+    insert into city
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="cityId != null" >
+        city_id,
+      </if>
+      <if test="city != null" >
+        city,
+      </if>
+      <if test="countryId != null" >
+        country_id,
+      </if>
+      <if test="lastUpdate != null" >
+        last_update,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="cityId != null" >
+        #{cityId,jdbcType=SMALLINT},
+      </if>
+      <if test="city != null" >
+        #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="countryId != null" >
+        #{countryId,jdbcType=SMALLINT},
+      </if>
+      <if test="lastUpdate != null" >
+        #{lastUpdate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.totoro.ssm.model.City" >
+    update city
+    <set >
+      <if test="city != null" >
+        city = #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="countryId != null" >
+        country_id = #{countryId,jdbcType=SMALLINT},
+      </if>
+      <if test="lastUpdate != null" >
+        last_update = #{lastUpdate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where city_id = #{cityId,jdbcType=SMALLINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.totoro.ssm.model.City" >
+    update city
+    set city = #{city,jdbcType=VARCHAR},
+      country_id = #{countryId,jdbcType=SMALLINT},
+      last_update = #{lastUpdate,jdbcType=TIMESTAMP}
+    where city_id = #{cityId,jdbcType=SMALLINT}
+  </update>
+</mapper>
