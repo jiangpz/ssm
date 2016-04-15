@@ -10,11 +10,11 @@ import org.totoro.ssm.service.ICountryService;
 @Service()
 public class CountryServiceImpl implements ICountryService {
 
-	@Resource  
-    private CountryMapper countryDao;
+	@Resource
+    CountryMapper countryDao;
 	
 	public Country selectByPrimaryKey(Short countryId) {
-		return this.countryDao.selectByPrimaryKey(countryId);  
+		return countryDao.selectByPrimaryKey(countryId);  
 	}
 
 

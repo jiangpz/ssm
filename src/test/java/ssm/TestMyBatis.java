@@ -21,7 +21,7 @@ import org.totoro.ssm.service.ICountryService;
 public class TestMyBatis {
 
 	@Resource
-    private ICountryService countryService = null;
+    ICountryService countryService;
 	
     @Test
     public void test1() {
