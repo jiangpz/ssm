@@ -28,4 +28,9 @@ public class CountryController {
 		logger.info("country name : {}",country.getCountry());
 		return "showCountry";
 	}
+	
+	@RequestMapping("/showBlank")
+	public String toBlank(HttpServletRequest request,Model model){
+		return "showBlank";
+	}
 }
