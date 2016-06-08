@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>AdminLTE 2 | Blank Page</title>
 <!-- Tell the browser to be responsive to screen width -->
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 <!-- Bootstrap 3.3.6 -->
@@ -22,16 +21,3 @@
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
-  
-<!-- jQuery 2.2.0 -->
-<script src="${ctx}/static/plugins/jQuery/jQuery-2.2.0.min.js"></script>
-<!-- Bootstrap 3.3.6 -->
-<script src="${ctx}/static/bootstrap/js/bootstrap.min.js"></script>
-<!-- SlimScroll -->
-<script src="${ctx}/static/plugins/slimScroll/jquery.slimscroll.min.js"></script>
-<!-- FastClick -->
-<script src="${ctx}/static/plugins/fastclick/fastclick.js"></script>
-<!-- AdminLTE App -->
-<script src="${ctx}/static/dist/js/app.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="${ctx}/static/dist/js/demo.js"></script>

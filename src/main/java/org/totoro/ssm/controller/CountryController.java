@@ -1,7 +1,10 @@
 package org.totoro.ssm.controller;
 
+import java.util.ArrayList;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.ws.rs.GET;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,6 +19,7 @@ import org.totoro.ssm.service.ICountryService;
 public class CountryController {
 	
 	static Logger logger = LoggerFactory.getLogger(CountryController.class);
+	public static final String DATA_KEY = "_data"; //默认的查询结果返回数据key值，返回结果可能是一个VO对象，也可能是一个List<T>对象， 在JSP页面通过${_data}取值
 	
 	@Resource
 	ICountryService countryService;
@@ -32,5 +36,13 @@ public class CountryController {
 	@RequestMapping("/showBlank")
 	public String toBlank(HttpServletRequest request,Model model){
 		return "showBlank";
+	}
+	
+	@GET
+	@RequestMapping("/list")
+	public String counttryList(HttpServletRequest request,Model model){
+		ArrayList<Country> countryLisst = countryService.list();
+		model.addAttribute(DATA_KEY, countryLisst);
+		return "country/list";
 	}
 }

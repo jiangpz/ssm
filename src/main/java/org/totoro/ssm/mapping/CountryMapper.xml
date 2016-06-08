@@ -9,6 +9,11 @@
   <sql id="Base_Column_List" >
     country_id, country, last_update
   </sql>
+  <select id="list" resultMap="BaseResultMap" >
+    select 'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    from country
+  </select>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Short" >
     select 'true' as QUERYID,
     <include refid="Base_Column_List" />

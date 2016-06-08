@@ -3,9 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<%@ include file="/WEB-INF/common/base_js_css.jsp"%>
+<title>SSM | Blank</title>
+<%@ include file="/WEB-INF/common/base_js_css_top.jsp"%>
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-blue sidebar-mini fixed">
 	<!-- Site wrapper -->
 	<div class="wrapper">
 		<%@ include file="/WEB-INF/common/header.jsp"%>
@@ -59,5 +60,8 @@
 		<%@ include file="/WEB-INF/common/controlbar.jsp"%>
 	</div>
 	<!-- ./wrapper -->
+	
+	<%@ include file="/WEB-INF/common/base_js_css_bottom.jsp"%>
+	
 </body>
 </html>

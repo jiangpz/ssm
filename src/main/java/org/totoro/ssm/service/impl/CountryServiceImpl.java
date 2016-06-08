@@ -1,5 +1,7 @@
 package org.totoro.ssm.service.impl;
 
+import java.util.ArrayList;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
@@ -15,6 +17,10 @@ public class CountryServiceImpl implements ICountryService {
 	
 	public Country selectByPrimaryKey(Short countryId) {
 		return countryDao.selectByPrimaryKey(countryId);  
+	}
+	
+	public ArrayList<Country> list() {
+		return countryDao.list();  
 	}
 
 
