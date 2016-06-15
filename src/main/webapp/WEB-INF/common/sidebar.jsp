@@ -38,34 +38,13 @@
       </li>
       <li class="treeview">
         <a href="#">
-          <i class="fa fa-files-o"></i>
-          <span>可选布局</span>
-          <span class="label label-primary pull-right">4</span>
-        </a>
-        <ul class="treeview-menu">
-          <li><a href="../layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-          <li><a href="../layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
-          <li><a href="../layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
-          <li><a href="../layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="../widgets.html">
-          <i class="fa fa-th"></i> <span>小部件</span>
-          <small class="label pull-right bg-green">Hot</small>
-        </a>
-      </li>
-      <li class="treeview">
-        <a href="#">
           <i class="fa fa-pie-chart"></i>
-          <span>图表</span>
+          <span>国家列表</span>
           <i class="fa fa-angle-left pull-right"></i>
         </a>
         <ul class="treeview-menu">
-          <li><a href="../charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
-          <li><a href="../charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
-          <li><a href="../charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
-          <li><a href="../charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
+          <li><a href="${ctx}/country/list.do"><i class="fa fa-circle-o"></i> Datatables</a></li>
+          <li><a href="${ctx}/country/page_list.do"><i class="fa fa-circle-o"></i> PageHelper</a></li>
         </ul>
       </li>
       <li class="treeview">
@@ -116,7 +95,7 @@
           <small class="label pull-right bg-yellow">12</small>
         </a>
       </li>
-      <li class="treeview active">
+      <li class="treeview">
         <a href="#">
           <i class="fa fa-folder"></i> <span>示例</span>
           <i class="fa fa-angle-left pull-right"></i>
@@ -129,7 +108,7 @@
           <li><a href="lockscreen.html"><i class="fa fa-circle-o"></i> 锁屏页面</a></li>
           <li><a href="404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
           <li><a href="500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
-          <li class="active"><a href="blank.html"><i class="fa fa-circle-o"></i> 空白页</a></li>
+          <li><a href="blank.html"><i class="fa fa-circle-o"></i> 空白页</a></li>
           <li><a href="pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li>
         </ul>
       </li>

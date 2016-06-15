@@ -11,8 +11,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.totoro.ssm.model.Country;
 import org.totoro.ssm.service.ICountryService;
+
+import com.alibaba.fastjson.JSONObject;
+import com.github.pagehelper.PageInfo;
 
 @Controller
 @RequestMapping("/country")
@@ -36,6 +40,32 @@ public class CountryController {
 	@RequestMapping("/showBlank")
 	public String toBlank(HttpServletRequest request,Model model){
 		return "showBlank";
+	}
+	
+	@GET
+	@RequestMapping("/page_list")
+	public String counttryPageList(HttpServletRequest request,Model model){
+		return "country/page_list";
+	}
+	
+	@GET
+	@RequestMapping("/datatable")
+	@ResponseBody
+	public JSONObject counttryDatatables(HttpServletRequest request,Model model){
+		String displayStart = request.getParameter("iDisplayStart");
+		String displayLength = request.getParameter("iDisplayLength");
+		String search = request.getParameter("sSearch");
+		String colIndex = request.getParameter("iSortCol_0");
+		String sortDirection = request.getParameter("sSortDir_0");
+		Integer pageLength = Integer.parseInt(displayLength);
+		Integer pageStart = Integer.parseInt(displayStart)/pageLength + 1;
+		PageInfo<Country> countryPageInfo = countryService.pageList(pageStart,pageLength,search,colIndex,sortDirection);
+		
+		JSONObject result = new JSONObject();
+		result.put("iTotalRecords", countryPageInfo.getTotal());
+		result.put("aaData", countryPageInfo.getList());
+		result.put("iTotalDisplayRecords", countryPageInfo.getTotal());
+		return result;
 	}
 	
 	@GET

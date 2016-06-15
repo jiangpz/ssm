@@ -18,7 +18,7 @@
 			<!-- Content Header (Page header) -->
 			<section class="content-header">
 				<h1>
-					国家列表 <small>基于Datatables实现</small>
+					国家列表 <small>基于Datatables与PageHelper</small>
 				</h1>
 				<ol class="breadcrumb">
 					<li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
@@ -41,10 +41,11 @@
 								  <th>国家名称</th>
 								  <th>最后更新时间</th>
 								  <th class="nosort" >操作</th>
+								  <th class="nosort" >固定信息</th>
 								</tr>
 							</thead>
 							
-							<tbody>
+<%-- 							<tbody>
 								<c:forEach var="vo" items="${_data }">
 									<tr>
 										<td>${ vo.countryId }</td>
@@ -57,13 +58,15 @@
 										</td>
 									</tr>
 								</c:forEach>
-							</tbody>
+							</tbody> --%>
 							
 							<tfoot>
 								<tr>
-								  <th>Country ID</th>
-								  <th>Country</th>
-								  <th class="nosort" >Last Update</th>
+								  <th>国家ID</th>
+								  <th>国家名称</th>
+								  <th class="nosort" >最后更新时间</th>
+								  <th class="nosort" >操作</th>
+								  <th class="nosort" >固定信息</th>
 								</tr>
 							</tfoot>
 						</table>
@@ -125,7 +128,40 @@
 			    "columnDefs": [ {
 			        "targets": 'nosort',
 			        "orderable": false
-			      } ]
+			      } ],
+			    //开启服务端处理
+			    "processing": true,
+			    "bServerSide": true,
+			    "sAjaxSource" : "${ctx}/country/datatable.do",
+		        "columns": [
+		                    { "data": "countryId" },
+		                    { "data": "country" },
+		                    //展示时间
+		                    {
+								"data": "lastUpdate",
+								"render": function (data) {
+							        var date = new Date(data);
+							        var month = date.getMonth() + 1;
+							        return (month.length > 1 ? month : "0" + month) + "/" + date.getDate() + "/" + date.getFullYear();
+							    }
+							},
+							//展示传参按钮
+		                    { 
+								"data": "countryId",
+								"render": function (data) {
+							        return "<a class='blue' href='javascript:void(0);' onclick='alert(" + data + ")' title='查看'>"
+									+ "<i class='fa fa-fw fa-chrome '></i>"
+									+ "</a>";
+							    }
+		                    },
+							//展示固定信息
+		                    { 
+								"data": null,
+								"defaultContent": "<a class='blue' href='javascript:void(0);' title='查看'>"
+												+ "<i class='fa fa-fw fa-chrome '></i>"
+												+ "</a>"
+		                    }
+		                ]
 			});
 		});
 	</script>

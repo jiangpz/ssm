@@ -20,6 +20,15 @@
     from country
     where country_id = #{countryId,jdbcType=SMALLINT}
   </select>
+  <select id="searchAndSort" resultMap="BaseResultMap" >
+    select 'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    from country
+    <if test="search != null  and search !=''">
+    where country_id like CONCAT('%','${search}','%' ) or country like CONCAT('%','${search}','%' )
+    </if>
+    order by ${colIndex} ${sortDirection}
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Short" >
     delete from country
     where country_id = #{countryId,jdbcType=SMALLINT}
