@@ -78,9 +78,9 @@
 
 5. [My-SSM-Demo-4](http://jiangpz.github.io/articles/2016-04/My-SSM-Demo-4)
 
-6. [My-SSM-Demo-4](http://jiangpz.github.io/articles/2016-04/My-SSM-Demo-5)
+6. [My-SSM-Demo-5](http://jiangpz.github.io/articles/2016-06/My-SSM-Demo-5)
 
-7. [My-SSM-Demo-4](http://jiangpz.github.io/articles/2016-04/My-SSM-Demo-6)
+7. [My-SSM-Demo-6](http://jiangpz.github.io/articles/2016-06/My-SSM-Demo-6)
 
 7. ...
 
