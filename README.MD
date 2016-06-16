@@ -1,4 +1,4 @@
-现在想做一个自己的SSM Demo，以后再写项目就在这个Demo的基础上写，同时对自己学习的东西进行记录和巩固。参考[ssm-easy-template](https://github.com/ichenkaihua/ssm-easy-template)。
+现在想做一个自己的SSM Demo，以后再写项目就在这个Demo的基础上写，同时对自己学习的东西进行记录和巩固。参考[ssm-easy-template](https://github.com/ichenkaihua/ssm-easy-template)。Mybatis通用Mapper3、Tomcat连接池、Spring-Security、plupload、EasyMock、Memcached/Redis、Lucene/Solr、springfox先放一放，可能要等一段时间再添加了。
 
 #### 计划用到的插件如下(后续加版本号)：
 
@@ -22,7 +22,7 @@
 6. Mybatis-Pagehelper
 
     Mybatis的分页排序插件，由国人开发，用起来非常方便，[Mybatis-Pagehelperp项目主页](https://github.com/pagehelper/Mybatis-PageHelper) 。
-7. Mybatis通用Mapper3
+7. ~~Mybatis通用Mapper3~~
 
     也是有上面作者开发，极其方便的使用Mybatis单表的增删改查，如果是单表操作，基本不用写Mapper文件,Mybatis通用[Mapper3项目主页](https://github.com/abel533/Mapper)。
 8. MySQL+Oracle
@@ -34,22 +34,22 @@
 10. slf4j+log4j
 
     SLF4J不同于其他日志类库，与其它有很大的不同。SLF4J(Simple logging Facade for Java)不是一个真正的日志实现，而是一个抽象层（ abstraction layer），它允许你在后台使用任意一个日志类库。如果是在编写供内外部都可以使用的API或者通用类库，那么你真不会希望使用你类库的客户端必须使用你选择的日志类库。
-11. Tomcat连接池
+11. ~~Tomcat连接池~~
 
     在Web程序中使用JDBC时，每次处理客户端请求都需要重新建立数据库连接，如建立数据库的请求较多，将会消耗大量的系统资源，可使用Tomcat提供的数据库连接池技术，它允许程序重复使用一个现有的数据库连接，避免重新建立大量数据连接。
-12. Spring-Security
+12. ~~Spring-Security~~
 
     Spring Security是一个能够为基于Spring的企业应用系统提供声明式的安全访问控制解决方案的安全框架。它提供了一组可以在Spring应用上下文中配置的Bean，充分利用了Spring IoC，DI（控制反转Inversion of Control ,DI:Dependency Injection 依赖注入）和AOP（面向切面编程）功能，为应用系统提供声明式的安全访问控制功能，减少了为企业系统安全控制编写大量重复代码的工作。
-13. Commons Fileupload, plupload
+13. Commons Fileupload, ~~plupload~~
 
     spring mvc中集成了appache-commons-fileupload上传组件。上传处理更便捷。plupload是上传的前端插件，根据需要可以进行定制。
-14. EasyMock
+14. ~~EasyMock~~
 
     EasyMock 是一套通过简单的方法对于指定的接口或类生成 Mock 对象的类库，它能利用对接口或类的模拟来辅助单元测试。单元测试是对应用中的某一个模块的功能进行验证。在单元测试中，我们常遇到的问题是应用中其它的协同模块尚未开发完成，或者被测试模块需要和一些不容易构造、比较复杂的对象进行交互。另外，由于不能肯定其它模块的正确性，我们也无法确定测试中发现的问题是由哪个模块引起的。Mock 对象能够模拟其它协同模块的行为，被测试模块通过与 Mock 对象协作，可以获得一个孤立的测试环境。此外，使用 Mock 对象还可以模拟在应用中不容易构造（如 HttpServletRequest 必须在 Servlet 容器中才能构造出来）和比较复杂的对象（如 JDBC 中的 ResultSet 对象），从而使测试顺利进行。
-16. Memcached/Redis
+16. ~~Memcached/Redis~~
 
     内存缓存机制。
-17. Lucene
+17. ~~Lucene~~
 
     Lucene是apache软件基金会4 jakarta项目组的一个子项目，是一个开放源代码的全文检索引擎工具包，但它不是一个完整的全文检索引擎，而是一个全文检索引擎的架构，提供了完整的查询引擎和索引引擎，部分文本分析引擎（英文与德文两种西方语言）。
 
