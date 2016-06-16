@@ -44,22 +44,6 @@
 								  <th class="nosort" >固定信息</th>
 								</tr>
 							</thead>
-							
-<%-- 							<tbody>
-								<c:forEach var="vo" items="${_data }">
-									<tr>
-										<td>${ vo.countryId }</td>
-										<td>${ vo.country }</td>
-										<td><fmt:formatDate value="${ vo.lastUpdate }" type="both" dateStyle="medium"/></td>
-										<td>
-											<a class="blue" href="javascript:void(0);" onclick="countryInfoGet('${vo.countryId}')" title="查看">
-												<i class="fa fa-fw fa-chrome "></i>
-											</a>
-										</td>
-									</tr>
-								</c:forEach>
-							</tbody> --%>
-							
 							<tfoot>
 								<tr>
 								  <th>国家ID</th>
