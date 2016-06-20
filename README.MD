@@ -1,4 +1,4 @@
-现在想做一个自己的SSM Demo，以后再写项目就在这个Demo的基础上写，同时对自己学习的东西进行记录和巩固。参考[ssm-easy-template](https://github.com/ichenkaihua/ssm-easy-template)。Mybatis通用Mapper3、Tomcat连接池、Spring-Security、plupload、EasyMock、Memcached/Redis、Lucene/Solr、springfox先放一放，可能要等一段时间再添加了。
+现在想做一个自己的SSM Demo，以后再写项目就在这个Demo的基础上写，同时对自己学习的东西进行记录和巩固。参考[ssm-easy-template](https://github.com/ichenkaihua/ssm-easy-template)。Mybatis通用Mapper3、Tomcat连接池、Spring-Security、plupload、EasyMock、Memcached/Redis、Lucene/Solr、springfox、quartz先放一放，可能要等一段时间再添加了。
 
 #### 计划用到的插件如下(后续加版本号)：
 
@@ -52,6 +52,8 @@
 17. ~~Lucene~~
 
     Lucene是apache软件基金会4 jakarta项目组的一个子项目，是一个开放源代码的全文检索引擎工具包，但它不是一个完整的全文检索引擎，而是一个全文检索引擎的架构，提供了完整的查询引擎和索引引擎，部分文本分析引擎（英文与德文两种西方语言）。
+    
+18. ~~quartz~~
 
 #### 开发环境
 
